@@ -17,34 +17,26 @@ gsap.registerPlugin(ScrollToPlugin, ScrollTrigger, SplitText);
 
   // animate text on scroll
   //
-  const quotes = document.querySelectorAll(".animation-text");
-  const timing = [ 0.3, 0.4, 0.4, 0.4];
-  const stagger = [ 0.01, 0.02, 0.02, 0.02];
+  const quotes = gsap.utils.toArray("[title-animation]");
   function setupSplits() {
     quotes.forEach((quote, i) => {
-
-      if(quote.anim) {
-        quote.anim.progress(1).kill();
-        quote.split.revert();
-      }
 
       quote.split = new SplitText(quote, {
         type:"words,chars",
         wordsClass: "split-line"
       });
 
-      quote.anim = gsap.from(quote.split.chars, {
-        scrollTrigger: {
-          trigger: quote,
-          start: "top 75%",
-        },
-        duration: timing[i],
-        ease: "circ.out",
-        y: 80,
-        stagger: stagger[i]
+      const anim = gsap.fromTo(quote.split.words, {autoAlpha: 0}, {duration: 1, stagger: 0.03, autoAlpha: 1 });
+      ScrollTrigger.create({
+        trigger: quote,
+        animation: anim,
+        toggleActions: 'play none none none',
+        once: true,
       });
+
     });
   }
+  setupSplits()
 
 
 
