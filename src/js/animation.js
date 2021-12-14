@@ -40,7 +40,6 @@ gsap.registerPlugin(ScrollToPlugin, ScrollTrigger, SplitText);
 
 
 
-
   const fadeUp = gsap.utils.toArray("[fade-up]");
   fadeUp.forEach((el, i) => {
     const anim = gsap.fromTo(el, {autoAlpha: 0, y: 50}, {duration: 1, autoAlpha: 1, y: 0});
