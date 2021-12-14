@@ -1,4 +1,4 @@
-// @import "font.css";
+@import "font.css";
 html {
     visibility: visible;
     opacity: 1;
@@ -54,11 +54,463 @@ div, section{
 
 }
 
-$green: #1B1B1B;
+$green: #1B2112;
+$serif: 'Libre Baskerville', serif;
+$mat: 'Mattone', sans-serif;
+$maz: "Maz-Regular", serif;
+$mazIt: "Maz-Italic", serif;
+$spacing: 8px;
+$spaceS: $spacing*6;
+$spaceM: $spacing*10;
+$spaceB: $spacing*25;
+$tsmall: 10px;
+$tquote: 32px;
+
+@mixin quote{
+  font-family: $maz;
+  font-size: $tquote;
+  text-transform: uppercase;
+  line-height: 1.5;
+  margin-bottom: $spacing*3;
+}
+@mixin author{
+  margin-bottom: $spacing;
+  font-family: $mat;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+@mixin lineEl{
+  height: 6px;
+  width:6px;
+  background: white;
+  border-radius: 100%;
+  position: absolute;
+}
 
 body{
   background: $green;
   color:white;
+  font-family: $serif;
+  line-height: normal;
+}
+
+.v-line-cont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .v-line{
+    width:1px;
+    height: 50vh;
+    background: white;
+    margin-top: $spacing*2;
+  }
+  span{
+    font-family: $mat;
+    font-size: $tsmall;
+    text-transform: uppercase;
+  }
+  &.end{
+    .v-line{
+      margin-top: 0;
+      margin-bottom: $spacing*2;
+      position: relative;
+      &:after{
+        content: " ";
+        @include lineEl;
+        bottom:0;
+        left: -3px;
+      }
+    }
+    h4{
+      @include author;
+      font-size: 14px;
+    }
+  }
+}
+
+.v-line.separator{
+  height: 50vh;
+  margin: 0 auto;
+  margin-bottom: $spaceS;
+  width: 1px;
+  background: white;
+}
+
+.first-section{
+  .hero-section{
+    .hero-container{
+      padding: $spaceS;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      .v-line-cont{
+        margin-top: 70vh;
+        .v-line{
+          position: relative;
+          &:before{
+            content: " ";
+            @include lineEl;
+            top:0;
+            left: -3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.centered-quote{
+  .quote-container{
+    width:70%;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: $spaceS;
+    h2{
+      @include quote;
+    }
+    .quote-author{
+      p{@include author;  }
+      span{font-style: italic;}
+    }
+  }
+}
+
+.title-section{
+  padding: 0 $spacing*3;
+  margin-top: $spaceB;
+  h1{
+    font-size: 84px;
+    text-transform: uppercase;
+    font-family: $maz;
+    margin-bottom: $spaceM;
+    padding: 0 $spacing*2;
+    text-align: center;
+  }
+  .subtitle{
+    display: flex;
+    align-items:center;
+    margin-bottom: $spaceM;
+    h2{
+      padding: 0 $spacing*3;
+      font-size: $tquote;
+      width:100%;
+      font-family: $maz;
+      white-space: nowrap;
+    }
+    .right-line{
+      display: flex;
+      position: relative;
+      height: 1px;
+      background: white;
+      width:100%;
+      &:after{
+        content: " ";
+        @include lineEl;
+        top:-3px;
+        right: 0px;
+      }
+    }
+    .left-line{
+      display: flex;
+      position: relative;
+      height: 1px;
+      background: white;
+      width:100%;
+      &:before{
+        content: " ";
+        @include lineEl;
+        top:-3px;
+      }
+    }
+  }
+}
+
+.section-title{
+  h1{
+    font-size: 84px;
+    text-transform: uppercase;
+    font-family: $maz;
+    margin-bottom: $spaceM;
+    padding: 0 $spacing*2;
+    text-align: center;
+  }
+  .sommario{
+    width:100%;
+    max-width: 1000px;
+    padding: 0 $spacing*3;
+    font-style: italic;
+    margin: 0 auto;
+    text-align:center;
+    font-size: 22px;
+    line-height: 1.4;
+    margin-bottom: $spaceB;
+
+  }
+}
+
+.text-container{
+  width:100%;
+  max-width: 1000px;
+  padding: 0 $spacing*3;
+  margin: 0 auto;
+  .month{
+    @include author;
+    margin-bottom: $spacing*2;
+    text-align: center;
+  }
+  .orizontal-line{
+    width:100%;
+    height: 1px;
+    background: white;
+    position: relative;
+    margin-bottom: $spaceS;
+    &:after{
+      content: "";
+      top:-3px;
+      @include lineEl;
+    }
+    &:before{
+      top:-3px;
+      right:0;
+      content: "";
+      @include lineEl;
+    }
+  }
+  .credits-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: $spaceS;
+    padding: 0 $spacing*3;
+    .left-c{
+      h5{
+        @include author;
+        margin-bottom: 4px;
+        span{
+          font-style: italic;
+          font-family: $serif;
+          text-transform: none;
+          margin-right: $spacing/2;
+        }
+      }
+      p{
+        @include author;
+        font-size: 8px;
+        line-height: 1.5;
+      }
+
+    }
+  }
+  .text{
+    margin-bottom: $spaceM;
+    p{
+      font-size: 20px;
+      line-height: 1.6;
+      .dropcap{
+        float: left;
+        margin-right: $spacing*3;
+        margin-bottom: $spacing;
+      }
+    }
+    p:not(:last-child){
+      margin-bottom: $spacing*4;
+    }
+  }
+}
+.infografica-container{
+  width:100%;
+  text-align: center;
+  margin-bottom: $spaceM;
+  h3{
+    margin: 0 auto;
+    @include author;
+    width:50%;
+    margin-bottom: $spacing*6;
+  }
+  img{
+    width:100%;
+    min-width: 100%;
+    height: auto;
+  }
+  &.small{
+    img{
+      width:70%;
+      margin: 0 auto;
+      min-width: unset;
+    }
+  }
+}
+
+.number-row{
+  width:100%;
+  padding: 0 $spacing*3;
+  margin-bottom: $spaceM;
+  .row-cont{
+    display: flex;
+    padding: $spacing*5 0;
+    border-top:1px solid white;
+    border-bottom: 1px solid white;
+    flex-wrap: wrap;
+  }
+  .col{
+    flex: 1;
+    padding: $spacing*3 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    flex-direction: column;
+    h3{
+      font-family: $mat;
+      font-size: 72;
+      margin-bottom: $spacing*3;
+    }
+    p{
+      font-style: italic;
+      line-height: 1.5;
+    }
+  }
+  .col:not(:last-child){
+    border-right: 1px solid white;
+  }
+}
+
+.chapter-separator{
+  width:100%;
+  padding: 0 $spacing*4;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: $spaceS;
+  img{
+    margin-bottom: $spacing*2;
+  }
+  .chapter-title{
+    display: flex;
+    align-items: center;
+    h2{
+      @include author;
+      padding: 0 $spacing*3;
+      width:100%;
+    }
+    .left-line{
+      width:100%;
+      background: white;
+      height: 1px;
+      position: relative;
+      &:before{
+        content: " ";
+        @include lineEl;
+        top:-3px;
+        left: 0;
+      }
+    }
+    .right-line{
+      width:100%;
+      background: white;
+      height: 1px;
+      position: relative;
+      &:after{
+        content: " ";
+        @include lineEl;
+        top:-3px;
+        right: 0;
+      }
+    }
+  }
+}
+
+.video-section, .slider-section, .image-quote-section, .image-section-mirror, .image-mosaico-section{
+  height: 80vh;
+  background: grey;
+  margin-bottom: $spaceM;
+}
+
+
+.end-section{
+  text-align: center;
+  margin-bottom: $spacing*4;
+}
+
+footer{
+  padding: 0 $spacing*3;
+  display: flex;
+  flex-direction: column;
+  .orizontal-line{
+    width:100%;
+    height: 1px;
+    background: white;
+    position: relative;
+    &:after{
+      content: "";
+      top:-3px;
+      @include lineEl;
+    }
+    &:before{
+      top:-3px;
+      right:0;
+      content: "";
+      @include lineEl;
+    }
+  }
+  .footer-container{
+    padding: $spacing*6 $spacing*6;
+    .title{
+      margin-bottom: $spacing*4;
+    }
+    .link-container{
+      display: flex;
+      a{color:white;}
+      line-height: 1.5;
+      .col{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        p{
+          font-style: italic;
+        }
+        ul{
+          li{
+            margin-top: $spacing;
+            @include author;
+          }
+        }
+        .top{
+          @include author;
+          p{
+            font-style: italic;
+            font-family: $serif;
+            text-transform: none;
+            letter-spacing: normal;
+            font-size: 16px;
+            margin-bottom: $spacing*2;
+          }
+        }
+        .bottom{
+          font-style: italic;
+          margin-top: $spacing*5;
+          a{
+            @include author;
+            font-style: normal;
+            display: block;
+            margin-top: $spacing*2;
+            margin-bottom: 0;
+          }
+        }
+        &:last-child{
+          li{
+            font-size: 8px;
+            margin-top: $spacing*2;
+          }
+        }
+      }
+      .col:not(:last-child){
+        padding-right: 5%;
+      }
+    }
+  }
 }
 
 
