@@ -495,18 +495,52 @@ body{
     display: flex;
     flex-wrap: nowrap;
     overflow: hidden;
+    padding: 0 $spacing*6;
   .panel{
     display: flex;
-    flex: 0 0 50%;
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
     justify-content: center;
   	height: 100%;
-    padding: 7rem 7rem 2rem ;
+    width: 33.33vw !important;
+    &:nth-child(1){
+      img{
+        margin-top: 0px;
+        padding-left: 30px;
+      }
+    }
+    &:nth-child(2){
+      img{
+        margin-top: 30px;
+      }
+    }
+    &:nth-child(3){
+      img{
+        margin-top: 60px;
+      }
+    }
+    &:nth-child(4){
+      img{
+        margin-top: 90px;
+      }
+    }
+    &:nth-child(5){
+      img{
+        margin-top: 120px;
+        padding-right: 30px;
+      }
+    }
+    &:nth-child(6){
+      img{
+        margin-top: 150px;
+      }
+    }
   img{
     width:100%;
+    min-width: 38vw !important;
     height: auto;
+    position: relative;
     }
   }
 }
