@@ -2,6 +2,8 @@ import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
+import CSSRulePlugin from "gsap/CSSRulePlugin";
+
 import Typed from 'typed.js';
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger, SplitText);
@@ -105,3 +107,60 @@ gsap.registerPlugin(ScrollToPlugin, ScrollTrigger, SplitText);
       }
 
   });
+
+
+const tl = gsap.timeline();
+const rule = CSSRulePlugin.getRule(".img-container-left:after");
+    tl.to(rule, { duration: 0.7, width: "100%", ease: "Power2.ease" })
+    .set(rule, { duration: 0, right: 0, left: "unset" })
+    .to(rule, { duration: 1, width: "0%", ease: "Power2.ease" })
+    .to("img", { duration: 0.2, opacity: 1, delay: -1 })
+    .from(".img-container-left img", {
+      duration: 1,
+      scale: 1.1,
+      ease: "Power2.easeInOut",
+      delay: -1.2
+    });
+
+
+const tl2 = gsap.timeline();
+const rule2 = CSSRulePlugin.getRule(".img-container-right:after");
+        tl2.to(rule2, { duration:0.7, width: "100%", ease: "Power2.ease" })
+        .set(rule2, { duration: 0, left: 0, right: "unset" })
+        .to(rule2, { duration: 1, width: "0%", ease: "Power2.ease" })
+        .to("img", { duration: 0.2, opacity: 1, delay: -1 })
+        .from(".img-container-right img", {
+          duration: 1,
+          scale: 1.1,
+          ease: "Power2.easeInOut",
+          delay: -1.2
+  });
+
+
+  // skew image
+
+//   let proxy = { skew: 0 },
+//     skewSetterL = gsap.quickSetter(".skewElem-left", "skewY", "deg"),
+//     skewSetterR = gsap.quickSetter(".skewElem-right", "skewY", "deg"),
+//     clamp = gsap.utils.clamp(-3, 3);
+// ScrollTrigger.create({
+//   onUpdate: (self) => {
+//     let skew = clamp(self.getVelocity() / -300);
+//     if (Math.abs(skew) > Math.abs(proxy.skew)) {
+//       proxy.skew = skew;
+//       gsap.to(proxy, {skew: 0, duration: 0.8, ease: "power3", overwrite: true, onUpdate: () => skewSetterL(proxy.skew)});
+//     }
+//   }
+// });
+// ScrollTrigger.create({
+//   onUpdate: (self) => {
+//     let skew = clamp(self.getVelocity() / -300);
+//     if (Math.abs(skew) > Math.abs(proxy.skew)) {
+//       proxy.skew = skew;
+//       gsap.to(proxy, {skew: 0, duration: 0.8, ease: "power3", overwrite: true, onUpdate: () => skewSetterR(proxy.skew)});
+//     }
+//   }
+// });
+//
+// gsap.set(".skewElem-left", {transformOrigin: "left top", force3D: true});
+// gsap.set(".skewElem-right", {transformOrigin: "right top", force3D: true});
