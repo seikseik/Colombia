@@ -404,7 +404,7 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: $spaceM;
-
+    text-align: center;
     h2 {
       padding: 0 $spacing*3;
       font-size: $tquote;
@@ -683,69 +683,52 @@ body {
   }
 }
 
-.slider-section {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-wrap: nowrap;
-  overflow: hidden;
-  padding: 0 $spacing*6;
-
-  .panel {
+.swiper-slide-active{
+  transform: scale(1.2);
+}
+.slider-section{
+  .slider-heading{
     display: flex;
-    flex-wrap: wrap;
+    padding: 0 $spacing*4;
     align-items: center;
-    align-content: center;
-    justify-content: center;
-    height: 100%;
-    width: 33.33vw !important;
-
-    &:nth-child(1) {
-      img {
-        margin-top: 0;
-        padding-left: 30px;
-      }
+    .text{
+      width:30%;
+      font-family: $mat;
+      font-size: 13px;
+      letter-spacing: 1px;
+      line-height: 1.6;
+      margin-bottom: 8px;
+      text-transform: uppercase;
     }
-
-    &:nth-child(2) {
-      img {
-        margin-top: 30px;
-      }
+    .line{
+      width:70%;
+      margin-left: $spacing*2;
+      border: 1px solid white;
     }
-
-    &:nth-child(3) {
-      img {
-        margin-top: 60px;
-      }
+  }
+  .swiper{
+    .swiper-wrapper{
+      height: 800px;
     }
-
-    &:nth-child(4) {
-      img {
-        margin-top: 90px;
-      }
-    }
-
-    &:nth-child(5) {
-      img {
-        margin-top: 120px;
-        padding-right: 30px;
-      }
-    }
-
-    &:nth-child(6) {
-      img {
-        margin-top: 150px;
-      }
-    }
-
-    img {
-      width: 100%;
-      min-width: 38vw !important;
-      height: auto;
-      position: relative;
+    .swiper-slide{
+      transition: .2s ease;
+      z-index: 2;
+      display: flex;
+      align-items: center;
     }
   }
 }
+.slide-captions {
+	position: absolute;
+	top: 50%;
+	left: 15%;
+	color: #FFF;
+	z-index: 999;
+	transform: translateY(-50%);
+}
+
+
+
 
 
 
