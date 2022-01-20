@@ -3,28 +3,21 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
 import Swiper, { Navigation, Pagination } from 'swiper';
+Swiper.use([Navigation, Pagination]);
 
-import CSSRulePlugin from "gsap/CSSRulePlugin";
+import lozad from 'lozad'
 
-import Typed from 'typed.js';
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger, SplitText);
 
 
-// let h = document.querySelector(".hero").offsetHeight;
-// let topArrow = document.querySelector(".hero");
-// topArrow.addEventListener("click", function(){
-//   body.classList.remove("open")
-//   gsap.to(window, {duration: 0.7, scrollTo: h});
-// });
-
+const observer = lozad();
+observer.observe();
 
 
   window.addEventListener('DOMContentLoaded', (event) => {
     const myTimeout = setTimeout(scroll, 200);
 
-    // animate text on scroll
-    //
     const quotes = gsap.utils.toArray("[title-animation]");
     function setupSplits() {
       quotes.forEach((quote, i) => {
@@ -70,95 +63,47 @@ gsap.registerPlugin(ScrollToPlugin, ScrollTrigger, SplitText);
       });
     });
 
+      // fade blocchi
+  ScrollTrigger.batch(".hero-image", {
+    onEnter: elements => {
+      gsap.to(elements, {
+        opacity: 1,
+        stagger: 0.1,
+        duration: 0.3,
+        webkitFilter: "blur(0)"
+      });
+    },
+    once: true
+  });
 
   });
 
 
-const tl = gsap.timeline();
-const rule = CSSRulePlugin.getRule(".img-container-left:after");
-    tl.to(rule, { duration: 0.7, width: "100%", ease: "Power2.ease" })
-    .set(rule, { duration: 0, right: 0, left: "unset" })
-    .to(rule, { duration: 1, width: "0%", ease: "Power2.ease" })
-    .to("img", { duration: 0.2, opacity: 1, delay: -1 })
-    .from(".img-container-left img", {
-      duration: 1,
-      scale: 1.1,
-      ease: "Power2.easeInOut",
-      delay: -1.2
-    });
-
-
-const tl2 = gsap.timeline();
-const rule2 = CSSRulePlugin.getRule(".img-container-right:after");
-        tl2.to(rule2, { duration:0.7, width: "100%", ease: "Power2.ease" })
-        .set(rule2, { duration: 0, left: 0, right: "unset" })
-        .to(rule2, { duration: 1, width: "0%", ease: "Power2.ease" })
-        .to("img", { duration: 0.2, opacity: 1, delay: -1 })
-        .from(".img-container-right img", {
-          duration: 1,
-          scale: 1.1,
-          ease: "Power2.easeInOut",
-          delay: -1.2
-  });
 
 
   // slideshow
 
-
   const swiper = new Swiper('.swiper', {
-    direction: 'horizontal',
     loop: true,
-    slidesPerView: 3,
+    slidesPerView: 1,
+    spaceBetween: 30,
     centeredSlides: true,
-    pagination: {
-      el: '.swiper-pagination',
+    grabCursor: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      }
+    },
+    navigation: {
+    nextEl: '.swiper-button-next-custom',
+    prevEl: '.swiper-button-prev-custom',
     },
     on: {
      slideChangeTransitionStart: function () {
-         let activeSlide = document.querySelector('div.swiper-slide-active');
+         let activeSlide = this.el.querySelector('div.swiper-slide-active');
          let caption = activeSlide.querySelector('img').getAttribute("data-caption");
-         let slideCaption = document.querySelector("")
-         $(".slide-captions").html(function() {
-           return "<h2 class='current-title'>" + caption + "</h2>";
-         });
+         let slideCaption = this.el.parentElement.querySelector(".slide-captions")
+         slideCaption.innerHTML = "<h2 class='current-title'>" + caption + "</h2>"
      }
    }
 });
-
-	var sizes2 = $(swiper.slides[swiper.activeIndex]).attr("data-caption");
-  	$(".slide-captions").html(function() {
-  	return "<h2 class='current-title'>" + sizes2 + "</h2>";
-  });
-
-
-  // swiper.on('slideChange', function () {
-  //   var activeSlide = document.querySelector('div.swiper-slide-active');
-  // });
-
-  // skew image
-
-//   let proxy = { skew: 0 },
-//     skewSetterL = gsap.quickSetter(".skewElem-left", "skewY", "deg"),
-//     skewSetterR = gsap.quickSetter(".skewElem-right", "skewY", "deg"),
-//     clamp = gsap.utils.clamp(-3, 3);
-// ScrollTrigger.create({
-//   onUpdate: (self) => {
-//     let skew = clamp(self.getVelocity() / -300);
-//     if (Math.abs(skew) > Math.abs(proxy.skew)) {
-//       proxy.skew = skew;
-//       gsap.to(proxy, {skew: 0, duration: 0.8, ease: "power3", overwrite: true, onUpdate: () => skewSetterL(proxy.skew)});
-//     }
-//   }
-// });
-// ScrollTrigger.create({
-//   onUpdate: (self) => {
-//     let skew = clamp(self.getVelocity() / -300);
-//     if (Math.abs(skew) > Math.abs(proxy.skew)) {
-//       proxy.skew = skew;
-//       gsap.to(proxy, {skew: 0, duration: 0.8, ease: "power3", overwrite: true, onUpdate: () => skewSetterR(proxy.skew)});
-//     }
-//   }
-// });
-//
-// gsap.set(".skewElem-left", {transformOrigin: "left top", force3D: true});
-// gsap.set(".skewElem-right", {transformOrigin: "right top", force3D: true});
