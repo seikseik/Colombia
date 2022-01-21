@@ -29,7 +29,8 @@
   </head>
 
   <body>
-
+    <progress max="100" value="0"></progress>
+    
     <section class="first-section">
 
       <div class="hero-section">
@@ -175,7 +176,8 @@
 
     <div class="infografica-container">
       <h3 fade>I primi 5 paesi al mondo per uccisioni di persone che si occupano di diritti umani</h3>
-      <img src="./assets/info.svg" alt="">
+      <img class="desktop" src="./assets/info.svg" alt="">
+      <img class="mobile" src="./assets/info-mobile.svg" alt="">
     </div>
 
 
@@ -242,12 +244,20 @@
 
     <div class="video-section">
       <div class="video-container">
-        <img class="lozad" data-src="../immagini/mosaico-1.png" src="../immagini/mosaico-1-placeholder.png" alt="">
+
+
+        <img class="lozad desktop" src="../immagini/mosaico-1-placeholder.png" data-src="../immagini/mosaico-1.png">
+        <img class="lozad mobile" src="../immagini/mosaico-1-mobile-placeholder.png" data-src="../immagini/mosaico-1-mobile.png">
+
+
         <div class="text-video">
           <div class="text-video-container">
             <div class="svg-cont">
-              <svg class="line" width="79" height="142" viewBox="0 0 79 142" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="line desktop" width="79" height="142" viewBox="0 0 79 142" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M77.5002 1.02148L1.00024 141.021" stroke="white" stroke-width="1.3" stroke-linecap="round"/>
+              </svg>
+              <svg class="line mobile" width="42" height="82" viewBox="0 0 42 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.00024 1.31104L41.0002 81.311" stroke="white" stroke-width="1.3" stroke-linecap="round"/>
               </svg>
             </div>
             <p>La Cordigliera Centrale delle Ande cosparsa di coltivazioni di marihuana. Le lampadine utilizzate per le piante si accendono ogni giorno, tutte insieme, intorno alle 18:30</p>
@@ -269,7 +279,8 @@
 
     <div class="infografica-container small">
       <h3 title-animation>la spartizione del commercio della marihuana nel Centro-Sud America TRA COLOMBIA E PARAGUAY</h3>
-      <img src="./assets/info2.svg" alt="">
+      <img class="desktop" src="./assets/info2.svg" alt="">
+      <img class="mobile" src="./assets/info2-mobile.svg" alt="">
     </div>
 
     <div class="text-container">
@@ -331,15 +342,18 @@
 
     <div class="image-quote-section">
       <div class="image-quote-container">
-        <div class="image-left">
-          <img class="lozad" data-src="./assets/quote-1.1.png" alt="">
+        <div class="image-quote-mobile mobile">
+          <img class="lozad" img="../immagini/quote-1-mobile-placeholder.png" data-src="../immagini/quote-1-mobile.png" alt="">
+        </div>
+        <div class="image-left desktop">
+          <img class="lozad" img="../immagini/quote-1.1-placeholder.png" data-src="../immagini/quote-1.1.png" alt="">
         </div>
         <div class="text-quote">
           <h3 title-animation>Poi all’improvviso l’esplosione. L’aria fischiava ed era tutto completamente scuro. Non si vedeva più il sole. Un’autobomba nel palazzo del sindaco. Toribío fu completamente distrutta. Nessun assalto dei guerriglieri aveva causato così tanti danni</h3>
           <h5 title-animation>Un ragazzo di Toribío ricorda l'attentato del 9 luglio 2011</h5>
         </div>
-        <div class="image-right">
-          <img class="lozad" data-src="./assets/quote-1.2.png" alt="">
+        <div class="image-right desktop">
+          <img class="lozad" img="../immagini/quote-1.2-placeholder.png" data-src="../immagini/quote-1.2.png" alt="">
         </div>
       </div>
     </div>
@@ -401,12 +415,16 @@
 
     <div class="video-section">
       <div class="video-container">
-        <img class="lozad" data-src="./assets/mosaico-2.png" alt="">
+        <img class="lozad desktop" src="../immagini/mosaico-2-placeholder.png" data-src="../immagini/mosaico-2.png" alt="">
+        <img class="lozad mobile" src="../immagini/mosaico-2-mobile-placeholder.png" data-src="../immagini/mosaico-2-mobile.png" alt="">
         <div class="text-video">
           <div class="text-video-container">
             <div class="svg-cont">
-              <svg class="line" width="79" height="142" viewBox="0 0 79 142" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="line desktop" width="79" height="142" viewBox="0 0 79 142" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M77.5002 1.02148L1.00024 141.021" stroke="white" stroke-width="1.3" stroke-linecap="round"/>
+              </svg>
+              <svg class="line mobile" width="42" height="82" viewBox="0 0 42 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.00024 1.31104L41.0002 81.311" stroke="white" stroke-width="1.3" stroke-linecap="round"/>
               </svg>
             </div>
             <p>Un contadino nasa mostra le sue coltivazioni di marihuana: malgrado l'opposizione dei Governatori locali, sta implementando un progetto di “turismo dell'erba” finanziato da un magnate statunitense </p>
@@ -458,7 +476,20 @@
 
     <div class="image-quote-section">
       <div class="image-quote-container">
-
+        <div class="image-quote-mobile mobile">
+          <img class="lozad" img="../immagini/quote-2-mobile-placeholder.png" data-src="../immagini/quote-2-mobile.png" alt="">
+        </div>
+        <div class="image-left desktop">
+          <img class="lozad" img="../immagini/quote-2.1-placeholder.png" data-src="../immagini/quote-2.1.png" alt="">
+        </div>
+        <div class="text-quote">
+          <h3 title-animation> I guerriglieri sono venuti a casa mia. Alcuni erano vecchi compagni di scuola: «Abbiamo bisogno di te». Promettono 1 milione di pesos a settimana – uno stipendio altissimo qui. Ma dopo qualche giorno ti mandano in trincea. <span>Senza preparazione, allo sbaraglio, a massacrare la gente
+            1 milione di pesos = 250 euro c.a</span> </h3>
+          <h5 title-animation>Un abitante di Toribío, che vuole rimanere anonimo</h5>
+        </div>
+        <div class="image-right desktop">
+          <img class="lozad" img="../immagini/quote-2.2-placeholder.png" data-src="../immagini/quote-2.2.png" alt="">
+        </div>
       </div>
     </div>
 
@@ -504,7 +535,8 @@
 
     <div class="image-section-mirror">
       <div class="image-mirror-container">
-        <img class="lozad" data-src="./assets/mirror-1.png" alt="">
+        <img class="lozad desktop" src="../immagini/mirror-1-placeholder.png" data-src="../immagini/mirror-1.png" alt="">
+        <img class="lozad mobile" src="../immagini/mirror-2-placeholder.png" data-src="../immagini/mirror-2.png" alt="">
       </div>
     </div>
 
@@ -546,12 +578,16 @@
 
     <div class="video-section">
       <div class="video-container">
-        <img src="./assets/mosaico-3.png" alt="">
+        <img class="desktop" src="../immagini/mosaico-3-placeholder.png" data-src="../immagini/mosaico-3.png" alt="">
+        <img class="mobile" src="../immagini/mosaico-3-mobile-placeholder.png" data-src="../immagini/mosaico-3-mobile.png" alt="">
         <div class="text-video">
           <div class="text-video-container">
             <div class="svg-cont">
-              <svg class="line" width="79" height="142" viewBox="0 0 79 142" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="line desktop" width="79" height="142" viewBox="0 0 79 142" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M77.5002 1.02148L1.00024 141.021" stroke="white" stroke-width="1.3" stroke-linecap="round"/>
+              </svg>
+              <svg class="line mobile" width="42" height="82" viewBox="0 0 42 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.00024 1.31104L41.0002 81.311" stroke="white" stroke-width="1.3" stroke-linecap="round"/>
               </svg>
             </div>
             <p>La comunità nasa riunita a Mosoco per ricevere Gustavo Petro, candidato alla presidenza della Colombia per le elezioni nazionali del 2020. Per la prima volta dalla fondazione del CRIC, l'organizzazione indigena si è schierata apertamente con un candidato presidenziale</p>
@@ -620,7 +656,8 @@
 
     <div class="image-section-mirror">
       <div class="image-mirror-container">
-        <img class="lozad" data-src="./assets/mirror-2.png" alt="">
+        <img class="lozad desktop" src="../immagini/mirror-2-placeholder.png" data-src="../immagini/mirror-2.png" alt="">
+        <img class="lozad mobile" src="../immagini/mirror-2-mobile-placeholder.png" data-src="../immagini/mirror-2-mobile.png" alt="">
       </div>
     </div>
 

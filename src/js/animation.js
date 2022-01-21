@@ -79,6 +79,15 @@ observer.observe();
   });
 
 
+  gsap.to('progress', {
+    value: 100,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: "#mySection",
+      scrub: 0.3
+    }
+  });
+
 
 
   // slideshow
@@ -86,12 +95,12 @@ observer.observe();
   const swiper = new Swiper('.swiper', {
     loop: true,
     slidesPerView: 1,
-    spaceBetween: 30,
     centeredSlides: true,
     grabCursor: true,
     breakpoints: {
       768: {
         slidesPerView: 2,
+        spaceBetween: 30,
       }
     },
     navigation: {
