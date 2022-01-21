@@ -1061,7 +1061,8 @@ footer {
   }
 
   .swiper-slide-active{
-    transform: scale(1);
+    transform: scale(1.2);
+    z-index: 9 !important;
   }
 
   .text-container .orizontal-line{
@@ -1080,7 +1081,7 @@ footer {
   }
 
   .slider-section .swiper .swiper-slide{
-    padding: $spacing*3;
+    padding: $spacing*4 0;
     img{
       width:100%;
       height: auto;
@@ -1158,6 +1159,7 @@ footer {
   .infografica-container h3{
     width:100%;
     margin: 0;
+    margin-bottom: $spacing;
   }
   .infografica-container img{
     margin-top: $spacing*2;
@@ -1188,15 +1190,24 @@ footer {
       .col{
         width:50%;
         flex: unset;
+        padding: $spacing*3 0;
         p{
           font-size: 15px;
         }
         &:first-child{
           margin-bottom: $spacing*3;
+          padding-right: $spacing;
         }
         &:nth-child(2){
           border-right: 0;
           margin-bottom: $spacing*3;
+          padding-left: $spacing;
+        }
+        &:nth-child(3){
+          padding-right: $spacing;
+        }
+        &:nth-child(4){
+          padding-left: $spacing;
         }
         h3{
           font-size: 40px;
@@ -1223,6 +1234,7 @@ footer {
         order:3;
         width:100%;
         padding: 0;
+        margin-top: -5px;
         h3{
           font-size: 16px;
         }
@@ -1242,10 +1254,17 @@ footer {
     flex-wrap: wrap;
     .col{
       min-width:100%;
+      .social{
+        display: flex;
+        justify-content: space-between;
+      }
       &:nth-child(3){
         width:50%;
         min-width: unset;
         margin-top: $spacing*6;
+        li, p{
+          margin-bottom: $spacing*2;
+        }
       }
       &:last-child{
         width:50%;

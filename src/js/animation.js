@@ -117,7 +117,7 @@ observer.observe();
 
   const swiper = new Swiper('.swiper', {
     loop: true,
-    slidesPerView: 1,
+    slidesPerView: 2,
     centeredSlides: true,
     grabCursor: true,
     breakpoints: {
