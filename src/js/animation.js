@@ -78,6 +78,29 @@ observer.observe();
 
   });
 
+  ScrollTrigger.batch(".lozad", {
+    onEnter: elements => {
+      gsap.to(elements, {
+        opacity: 1,
+        stagger: 0.1,
+        duration: 0.3,
+        webkitFilter: "blur(0)"
+      });
+    },
+    once: true
+  });
+
+  ScrollTrigger.batch(".hero-second", {
+    onEnter: elements => {
+      gsap.to(elements, {
+        opacity: 1,
+        stagger: 0.1,
+        duration: 0.3,
+        webkitFilter: "blur(0)"
+      });
+    },
+    once: true
+  });
 
   gsap.to('progress', {
     value: 100,
@@ -111,8 +134,10 @@ observer.observe();
      slideChangeTransitionStart: function () {
          let activeSlide = this.el.querySelector('div.swiper-slide-active');
          let caption = activeSlide.querySelector('img').getAttribute("data-caption");
-         let slideCaption = this.el.parentElement.querySelector(".slide-captions")
-         slideCaption.innerHTML = "<h2 class='current-title'>" + caption + "</h2>"
+         let slideCaption = this.el.parentElement.querySelector(".slide-captions");
+         if(slideCaption != null){
+           slideCaption.innerHTML = "<h2 class='current-title'>" + caption + "</h2>"
+         }
      }
    }
 });

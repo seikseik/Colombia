@@ -11,13 +11,25 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="16x16" href="https://visualeyed.com/favicons/favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="https://visualeyed.com/favicons/favicon-32x32.png">
+
     <title>Colombia</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
-  <link href="main.79c7504ae5a726319152.css" rel="stylesheet"></head>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+ crossorigin="anonymous"></script>
+  <link href="main.bbe8778dea23ea378393.css" rel="stylesheet"></head>
 
   <body>
+    <progress max="100" value="0"></progress>
 
     <section class="first-section">
 
@@ -31,12 +43,39 @@
             <div class="v-line"></div>
           </div>
 
+          <div class="image-hero-container desktop">
+            <figure class="img-container-left">
+              <img class="hero-image" src="assets/Hero_1.png" alt="">
+            </figure>
+            <figure class="img-container-right">
+              <img class="hero-image" src="assets/Hero_2.png" alt="">
+            </figure>
+            <figure class="img-container-right">
+              <img class="hero-image" src="assets/Hero_3.png" alt="">
+            </figure>
+            <figure class="img-container-left">
+              <img class="hero-image" src="assets/Hero_4.png" alt="">
+            </figure>
+            <figure class="img-container-left">
+              <img class="hero-image" src="assets/Hero_5.png" alt="">
+            </figure>
+            <figure class="img-container-right">
+              <img class="hero-image" src="assets/Hero_6.png" alt="">
+            </figure>
+            <figure class="img-container-right">
+              <img class="hero-image" src="assets/Hero_7.png" alt="">
+            </figure>
+          </div>
+          <div class="image-hero-container mobile">
+            <img class="hero-image" src="assets/hero-mobile.png" alt="">
+          </div>
+
         </div>
       </div>
 
       <div class="centered-quote">
         <div class="quote-container">
-          <h2 title-animation>Questo territorio è il più militarizzato del Paese e si è riempito di marihuana — di notte è illuminata e la vede chiunque: l’esercito, la polizia, i governatori; ma se le autorità erano in guerra contro il narco perché non hanno
+          <h2 title-animation>Questo territorio è il più militarizzato del Paese e si è riempito di marihuana — di notte è illuminata e la vede chiunque: l’esercito, la polizia, i governatori; ma se le autorità erano in guerra contro il narco perché non hanno
             fermato questo traffico che continua a crescere?</h2>
           <div class="quote-author">
             <p>Emmanuel Rozental</p>
@@ -45,11 +84,14 @@
         </div>
       </div>
 
-      <div class="v-line separator"></div>
+      <div class="separator-container first">
+        <img src="assets/Hero_8.png" alt="">
+        <div class="v-line separator"></div>
+      </div>
 
       <div class="centered-quote">
         <div class="quote-container">
-          <h2 title-animation>una libra di patate a quanto la vendi? A 1000 pesos. Una libra di mais? Ancora a meno. Una libra di marihuana? A 70.000 pesos –anche se è economica produrla, qui frutta più di qualunque altra merce</h2>
+          <h2 title-animation>una libra di patate a quanto la vendi? A 1000 pesos. Una libra di mais? Ancora a meno. Una libra di marihuana?  A 70.000 pesos –anche se è economica produrla, qui frutta più di qualunque altra merce</h2>
           <div class="quote-author">
             <p>Anonimo</p>
             <span>Contadino indigeno</span>
@@ -57,11 +99,14 @@
         </div>
       </div>
 
-      <div class="v-line separator"></div>
+        <div class="separator-container center">
+          <img src="assets/Hero_9.png" alt="">
+          <div class="v-line separator"></div>
+        </div>
 
       <div class="centered-quote">
         <div class="quote-container">
-          <h2 title-animation>Per tutta la vita abbiamo dovuto affrontare persone armate, che provavano a imporci di coltivare coca e marihuana. Noi abbiamo sempre resistito, senza armi. Solo con questo bastone e un walkie talkie</h2>
+          <h2 title-animation>Per tutta la vita abbiamo dovuto affrontare persone armate, che provavano a imporci di coltivare coca e marihuana. Noi abbiamo sempre resistito, senza armi. Solo con questo bastone e un walkie talkie</h2>
           <div class="quote-author">
             <p>Anonimo</p>
             <span>Governatore Indigeno del Cauca</span>
@@ -69,9 +114,12 @@
         </div>
       </div>
 
-      <div class="v-line-cont end">
-        <div class="v-line"></div>
-        <h4 class="credits">a cura di DALK DATA TALK</h4>
+      <div class="separator-container last">
+        <img src="assets/Hero_10.png" alt="">
+        <div class="v-line-cont end">
+          <div class="v-line"> </div>
+          <h4 class="credits">a cura di DALK DATA TALK</h4>
+        </div>
       </div>
 
     </section>
@@ -128,7 +176,8 @@
 
     <div class="infografica-container">
       <h3 fade>I primi 5 paesi al mondo per uccisioni di persone che si occupano di diritti umani</h3>
-      <img src="assets/info.svg" alt="">
+      <img class="desktop" src="assets/info.svg" alt="">
+      <img class="mobile" src="assets/info-mobile.svg" alt="">
     </div>
 
 
@@ -144,7 +193,7 @@
     <div class="number-row">
       <div class="row-cont">
         <div class="col">
-          <h3>2MLN</h3>
+          <h3>2<span>MLN</span></h3>
           <p fade>Gli appartenenti a gruppi autoctoni in Colombia</p>
         </div>
         <div class="col">
@@ -196,8 +245,28 @@
     <div class="video-section">
       <div class="video-container">
 
+
+        <img class="lozad desktop" src="assets/mosaico-1-placeholder.png" data-src="../immagini/mosaico-1.png">
+        <img class="lozad mobile" src="assets/mosaico-1-mobile-placeholder.png" data-src="../immagini/mosaico-1-mobile.png">
+
+
+        <div class="text-video">
+          <div class="text-video-container">
+            <div class="svg-cont">
+              <svg class="line desktop" width="79" height="142" viewBox="0 0 79 142" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M77.5002 1.02148L1.00024 141.021" stroke="white" stroke-width="1.3" stroke-linecap="round"/>
+              </svg>
+              <svg class="line mobile" width="42" height="82" viewBox="0 0 42 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.00024 1.31104L41.0002 81.311" stroke="white" stroke-width="1.3" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <p>La Cordigliera Centrale delle Ande cosparsa di coltivazioni di marihuana. Le lampadine utilizzate per le piante si accendono ogni giorno, tutte insieme, intorno alle 18:30</p>
+          </div>
+        </div>
       </div>
     </div>
+
+
 
     <div class="text-container">
       <div class="text">
@@ -210,7 +279,8 @@
 
     <div class="infografica-container small">
       <h3 title-animation>la spartizione del commercio della marihuana nel Centro-Sud America TRA COLOMBIA E PARAGUAY</h3>
-      <img src="assets/info2.svg" alt="">
+      <img class="desktop" src="assets/info2.svg" alt="">
+      <img class="mobile" src="assets/info2-mobile.svg" alt="">
     </div>
 
     <div class="text-container">
@@ -221,11 +291,44 @@
       </div>
     </div>
 
-    <div class="slider-section">
-      <div class="slider-container">
 
-      </div>
+<div class="slider-section">
+  <div class="slider-heading">
+    <div class="text">
+      Per combattere la presenza del narcotraffico, le comunità indigene si appellano spesso a rituali di purificazione del territorio: Alcuni murales di Toribío rappresentano le tradizioni spirituali più importanti della comunità
     </div>
+    <div class="line"></div>
+  </div>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="assets/gallery-1.1.png" alt="" data-caption="Sullo sfondo della Whipala (bandiera dei popoli andini) viene raffigurata la nascita di Juan Tama, figlio della laguna. Nel XVIII secolo, Juan Tama fu il primo governatore Nasa ad ottenere il riconoscimento legale delle terre ancestrali.
+"></div>
+      <div class="swiper-slide"><img src="assets/gallery-1.2.png" alt="" data-caption="Una raffigurazione di Cristina Bautista, governatrice di Toribío uccisa per la sua lotta al narcotraffico. In una dichiarazione pubblica disse: 'Se parliamo ci uccidono. Se non parliamo anche. Quindi parliamo!'
+"></div>
+      <div class="swiper-slide"><img src="assets/gallery-1.3.png" alt="" data-caption="La laguna è il luogo sacro per eccellenza della ritualità Nasa. Insieme, una raffigurazione del tessuto. Il linguaggio tessile è considerata la principale forma di scrittura tradizionale tra le comunità Nasa.
+"></div>
+      <div class="swiper-slide"><img src="assets/gallery-1.4.png" alt="" data-caption="Un'immagine di Álvaro Ulcué Chocué, sacerdote Nasa di Toribío. Missionario e difensore dei diritti dei popoli andini, Ulcué fu ucciso da un gruppo di paramilitari nel 1984 dopo aver denunciato gli abusi dei latifondisti nei territori indigeni.
+"></div>
+      <div class="swiper-slide"><img src="assets/gallery-1.5.png" alt="" data-caption="Un appello alla pace da parte della comunità: 'L'unione fa la pace'. "></div>
+      <div class="swiper-slide"><img src="assets/gallery-1.6.png" alt="" data-caption="Una delle sedi di Toribío del CRIC raffigura le prime grandi battaglie di resistenza Nasa contro i conquistatori spagnoli, vinte con pietre e bastoni."></div>
+    </div>
+  </div>
+
+  <div class="control-footer">
+    <div class="swiper-button-prev-custom"> <img src="assets/prev-icon.svg" alt=""> </div>
+    <div class="slide-captions"></div>
+    <div class="swiper-button-next-custom"><img src="assets/next-icon.svg" alt=""></div>
+  </div>
+
+</div>
+
+
+
+
+
+
+<!-- fine prova slide  -->
+
 
     <div class="text-container">
       <div class="text">
@@ -239,7 +342,19 @@
 
     <div class="image-quote-section">
       <div class="image-quote-container">
-
+        <div class="image-quote-mobile mobile">
+          <img class="lozad" img="../immagini/quote-1-mobile-placeholder.png" data-src="../immagini/quote-1-mobile.png" alt="">
+        </div>
+        <div class="image-left desktop">
+          <img class="lozad" img="../immagini/quote-1.1-placeholder.png" data-src="../immagini/quote-1.1.png" alt="">
+        </div>
+        <div class="text-quote">
+          <h3 title-animation>Poi all’improvviso l’esplosione. L’aria fischiava ed era tutto completamente scuro. Non si vedeva più il sole. Un’autobomba nel palazzo del sindaco. Toribío fu completamente distrutta. Nessun assalto dei guerriglieri aveva causato così tanti danni</h3>
+          <h5 title-animation>Un ragazzo di Toribío ricorda l'attentato del 9 luglio 2011</h5>
+        </div>
+        <div class="image-right desktop">
+          <img class="lozad" img="../immagini/quote-1.2-placeholder.png" data-src="../immagini/quote-1.2.png" alt="">
+        </div>
       </div>
     </div>
 
@@ -271,15 +386,15 @@
     <div class="number-row">
       <div class="row-cont">
         <div class="col">
-          <h3>8MLN</h3>
+          <h3>8<span>MLN</span></h3>
           <p fade>Le persone costrette a migrare per il conflitto armato</p>
         </div>
         <div class="col">
-          <h3>94k</h3>
+          <h3>94<span>k</span></h3>
           <p fade>Le vittime dei paramilitari in Colombia</p>
         </div>
         <div class="col">
-          <h3>+600</h3>
+          <h3><span>+</span>600</h3>
           <p>Gli attacchi armati delle FARC a Toribío, tra il 1964 e il 2012 </p>
         </div>
         <div class="col">
@@ -300,7 +415,21 @@
 
     <div class="video-section">
       <div class="video-container">
-
+        <img class="lozad desktop" src="assets/mosaico-2-placeholder.png" data-src="../immagini/mosaico-2.png" alt="">
+        <img class="lozad mobile" src="assets/mosaico-2-mobile-placeholder.png" data-src="../immagini/mosaico-2-mobile.png" alt="">
+        <div class="text-video">
+          <div class="text-video-container">
+            <div class="svg-cont">
+              <svg class="line desktop" width="79" height="142" viewBox="0 0 79 142" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M77.5002 1.02148L1.00024 141.021" stroke="white" stroke-width="1.3" stroke-linecap="round"/>
+              </svg>
+              <svg class="line mobile" width="42" height="82" viewBox="0 0 42 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.00024 1.31104L41.0002 81.311" stroke="white" stroke-width="1.3" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <p>Un contadino nasa mostra le sue coltivazioni di marihuana: malgrado l'opposizione dei Governatori locali, sta implementando un progetto di “turismo dell'erba” finanziato da un magnate statunitense </p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -312,9 +441,29 @@
     </div>
 
     <div class="slider-section">
-      <div class="slider-container">
-
+      <div class="slider-heading">
+        <div class="text">
+          Il centro urbano di Toribío è cosparso di murales che rappresentano il conflitto tra i gruppi armati legati al narcotraffico e la popolazione indigena locale. Le pareti del villaggio sono divenute un ulteriore spazio di disputa del territorio.
+        </div>
+        <div class="line"></div>
       </div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="assets/gallery-2.1.png" alt="" data-caption="In lingua nasa yuwe, 'Kiwe Thegnas' significa Guardia Indigena. Sono loro gli incaricati di combattere la presenza armata del narco nei territori ancestrali."></div>
+          <div class="swiper-slide"><img src="assets/gallery-2.2.png" alt="" data-caption="Ingresso del cimitero di Toribío. I graffiti dell'EPL, gruppo armato che controllava l'area rurale di Toribío -causando la morte di diversi civili indigeni- sono cancellati dai murales della Guardia Indigena."></div>
+          <div class="swiper-slide"><img src="assets/gallery-2.3.png" alt="" data-caption="All'ingresso del territorio di Toribío, le FARC EP segnalano la loro presenza firmandosi sopra i simboli delle autorità indigene locali."></div>
+          <div class="swiper-slide"><img src="assets/gallery-2.4.png" alt="" data-caption="Pietra in ricordo di Zuleima, giovane indigena violentata e uccisa da alcuni membri delle FARC EP perché nel suo negozio vendeva alimenti all'esercito."></div>
+          <div class="swiper-slide"><img src="assets/gallery-2.5.png" alt="" data-caption="I gruppi guerriglieri mostrano la loro presenza ai civili firmandosi sulle pareti  delle loro abitazioni e garage."></div>
+    <div class="swiper-slide"><img src="assets/gallery-2.6.png" alt="" data-caption="Graffiti delle Dissidenze delle FARC-EP ('Esercito del popolo') nel centro urbano di Toribío. Le firme sui muri vengono spesso accompagnate dall'anno, per ribadire la continuità della presenza armata."></div>
+        </div>
+      </div>
+
+      <div class="control-footer">
+        <div class="swiper-button-prev-custom"> <img src="assets/prev-icon.svg" alt=""> </div>
+        <div class="slide-captions"></div>
+        <div class="swiper-button-next-custom"><img src="assets/next-icon.svg" alt=""></div>
+      </div>
+
     </div>
 
 
@@ -327,7 +476,20 @@
 
     <div class="image-quote-section">
       <div class="image-quote-container">
-
+        <div class="image-quote-mobile mobile">
+          <img class="lozad" img="../immagini/quote-2-mobile-placeholder.png" data-src="../immagini/quote-2-mobile.png" alt="">
+        </div>
+        <div class="image-left desktop">
+          <img class="lozad" img="../immagini/quote-2.1-placeholder.png" data-src="../immagini/quote-2.1.png" alt="">
+        </div>
+        <div class="text-quote">
+          <h3 title-animation> I guerriglieri sono venuti a casa mia. Alcuni erano vecchi compagni di scuola: «Abbiamo bisogno di te». Promettono 1 milione di pesos a settimana – uno stipendio altissimo qui. Ma dopo qualche giorno ti mandano in trincea. <span>Senza preparazione, allo sbaraglio, a massacrare la gente
+            1 milione di pesos = 250 euro c.a</span> </h3>
+          <h5 title-animation>Un abitante di Toribío, che vuole rimanere anonimo</h5>
+        </div>
+        <div class="image-right desktop">
+          <img class="lozad" img="../immagini/quote-2.2-placeholder.png" data-src="../immagini/quote-2.2.png" alt="">
+        </div>
       </div>
     </div>
 
@@ -373,7 +535,8 @@
 
     <div class="image-section-mirror">
       <div class="image-mirror-container">
-
+        <img class="lozad desktop" src="assets/mirror-1-placeholder.png" data-src="../immagini/mirror-1.png" alt="">
+        <img class="lozad mobile" src="assets/mirror-1-mobile-placeholder.png" data-src="../immagini/mirror-1-mobile.png" alt="">
       </div>
     </div>
 
@@ -388,19 +551,19 @@
     <div class="number-row">
       <div class="row-cont">
         <div class="col">
-          <h3>240k</h3>
+          <h3>240<span>k</span></h3>
           <p fade>Gli indigeni di etnia nasa in Colombia</p>
         </div>
         <div class="col">
           <h3>269</h3>
-          <p fade>I leader indigeni uccisi in Colombia, tra il 2017 e il 2020</p>
+          <p fade>I leader indigeni uccisi in Colombia, tra il 2017 e il 2020</p>
         </div>
         <div class="col">
           <h3>24</h3>
-          <p fade>I gruppi dissidenti delle FARC ancora attivi </p>
+          <p fade>I gruppi dissidenti delle FARC ancora attivi </p>
         </div>
         <div class="col">
-          <h3>143k</h3>
+          <h3>143<span>k</span></h3>
           <p fade>Gli ettari destinati alla coltivazione di coca in Colombia</p>
         </div>
       </div>
@@ -413,9 +576,23 @@
       </div>
     </div>
 
-    <div class="image-mosaico-section">
-      <div class="image-mosaico-container">
-
+    <div class="video-section">
+      <div class="video-container">
+        <img class="desktop" src="assets/mosaico-3-placeholder.png" data-src="../immagini/mosaico-3.png" alt="">
+        <img class="mobile" src="assets/mosaico-3-mobile-placeholder.png" data-src="../immagini/mosaico-3-mobile.png" alt="">
+        <div class="text-video">
+          <div class="text-video-container">
+            <div class="svg-cont">
+              <svg class="line desktop" width="79" height="142" viewBox="0 0 79 142" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M77.5002 1.02148L1.00024 141.021" stroke="white" stroke-width="1.3" stroke-linecap="round"/>
+              </svg>
+              <svg class="line mobile" width="42" height="82" viewBox="0 0 42 82" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.00024 1.31104L41.0002 81.311" stroke="white" stroke-width="1.3" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <p>La comunità nasa riunita a Mosoco per ricevere Gustavo Petro, candidato alla presidenza della Colombia per le elezioni nazionali del 2020. Per la prima volta dalla fondazione del CRIC, l'organizzazione indigena si è schierata apertamente con un candidato presidenziale</p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -429,9 +606,26 @@
     </div>
 
     <div class="slider-section">
-      <div class="slider-container">
-
+      <div class="slider-heading noText">
+        <div class="line"></div>
       </div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="assets/gallery-3.1.png" alt="" data-caption="In lingua nasa yuwe, 'Kiwe Thegnas' significa Guardia Indigena. Sono loro gli incaricati di combattere la presenza armata del narco nei territori ancestrali."></div>
+          <div class="swiper-slide"><img src="assets/gallery-3.2.png" alt="" data-caption="Ingresso del cimitero di Toribío. I graffiti dell'EPL, gruppo armato che controllava l'area rurale di Toribío -causando la morte di diversi civili indigeni- sono cancellati dai murales della Guardia Indigena."></div>
+          <div class="swiper-slide"><img src="assets/gallery-3.3.png" alt="" data-caption="All'ingresso del territorio di Toribío, le FARC EP segnalano la loro presenza firmandosi sopra i simboli delle autorità indigene locali."></div>
+          <div class="swiper-slide"><img src="assets/gallery-3.4.png" alt="" data-caption="Pietra in ricordo di Zuleima, giovane indigena violentata e uccisa da alcuni membri delle FARC EP perché nel suo negozio vendeva alimenti all'esercito."></div>
+          <div class="swiper-slide"><img src="assets/gallery-3.5.png" alt="" data-caption="I gruppi guerriglieri mostrano la loro presenza ai civili firmandosi sulle pareti  delle loro abitazioni e garage."></div>
+    <div class="swiper-slide"><img src="assets/gallery-3.6.png" alt="" data-caption="Graffiti delle Dissidenze delle FARC-EP ('Esercito del popolo') nel centro urbano di Toribío. Le firme sui muri vengono spesso accompagnate dall'anno, per ribadire la continuità della presenza armata."></div>
+        </div>
+      </div>
+
+      <div class="control-footer">
+        <div class="swiper-button-prev-custom"> <img src="assets/prev-icon.svg" alt=""> </div>
+        <div class="slide-captions"></div>
+        <div class="swiper-button-next-custom"><img src="assets/next-icon.svg" alt=""></div>
+      </div>
+
     </div>
 
     <div class="text-container">
@@ -462,7 +656,8 @@
 
     <div class="image-section-mirror">
       <div class="image-mirror-container">
-
+        <img class="lozad desktop" src="assets/mirror-2-placeholder.png" data-src="../immagini/mirror-2.png" alt="">
+        <img class="lozad mobile" src="assets/mirror-2-mobile-placeholder.png" data-src="../immagini/mirror-2-mobile.png" alt="">
       </div>
     </div>
 
@@ -487,7 +682,7 @@
       <img src="assets/leaf.svg" alt="">
     </div>
 
-  <script type="text/javascript" src="main.8a51fcb8bf69cf8ffd57.bundle.js"></script></body>
+  <script type="text/javascript" src="main.db675df937db952c2b44.bundle.js"></script></body>
 
   <footer>
     <div class="orizontal-line"></div>
@@ -499,7 +694,7 @@
         <div class="col">
           <div class="top">
             Your daily dose of data stories is powered by
-            <a target="_blank"  href="">Dalk</a>  +  <a target="_blank"  href="">THE VISUAL AGENCY</a>
+            <a target="_blank" href="https://www.datatalk.it/">Dalk</a>  +  <a target="_blank"  href="https://thevisualagency.com/">THE VISUAL AGENCY</a>
           </div>
           <div class="bottom">
             If you are a brand and you are interested in Data Journalism and Brand Content Projects, send us an email ★
@@ -508,20 +703,20 @@
         <div class="col">
           <div class="top">
             <p>Need more information about our project?</p>
-            <a href="">About us</a>
+            <a target="_blank" href="https://visualeyed.com/about">About us</a>
           </div>
           <div class="bottom">
             <p>If you like what we are doing, you can do it too.</p>
-            <a target="_blank" href="">Join the crew</a>
+            <a href="mailto:tommaso.guadagni@datatalk.it">Join the crew</a>
           </div>
         </div>
         <div class="col">
           <p>Follow us</p>
           <ul>
-            <li> <a target="_blank" href="#">Facebook</a> </li>
-            <li> <a target="_blank" href="#">twitter</a> </li>
-            <li> <a target="_blank" href="#">Linkedin</a> </li>
-            <li> <a target="_blank" href="#">Instagram</a> </li>
+            <li> <a target="_blank" href="https://www.facebook.com/visualeyed1/">Facebook</a> </li>
+            <li> <a target="_blank" href="https://twitter.com/Visual_eyed">twitter</a> </li>
+            <li> <a target="_blank" href="https://www.linkedin.com/company/visualeyed/">Linkedin</a> </li>
+            <li> <a target="_blank" href="https://instagram.com/visualeyed_?igshid=iugcs7ec8f6r">Instagram</a> </li>
           </ul>
         </div>
         <div class="col">
@@ -532,8 +727,8 @@
             <a href="#"><img src="assets/in.svg" alt=""></a>
           </div>
           <ul>
-            <li> <a target="_blank" href="#">cookie policy</a> </li>
-            <li> <a target="_blank" href="#">Privacy policy</a> </li>
+            <li> <a target="_blank" href="https://visualeyed.com/cookie-policy">cookie policy</a> </li>
+            <li> <a target="_blank" href="https://visualeyed.com/privacy-policy">Privacy policy</a> </li>
             <li>©2021 The Visual Agency S.r.l.</li>
           </ul>
         </div>
