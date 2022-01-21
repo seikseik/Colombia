@@ -20,7 +20,19 @@ module.exports = merge(common, {
       new OptimizeCssAssetsPlugin(),
       new TerserPlugin(),
       new HtmlWebpackPlugin({
+        filename: "index.html",
         template: "./src/template.html",
+        minify: false
+      }),
+      new HtmlWebpackPlugin({
+        filename: "index-en.html",
+        template: "./src/template-en.html",
+        minify: false
+      })
+      ,
+      new HtmlWebpackPlugin({
+        filename: "index-sp.html",
+        template: "./src/template-sp.html",
         minify: false
       })
     ]

@@ -12,7 +12,16 @@ module.exports = merge(common, {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      filename: "index.html",
       template: "./src/template.html"
+    }),
+    new HtmlWebpackPlugin({
+      filename: "index-en.html",
+      template: "./src/template-en.html"
+    }),
+    new HtmlWebpackPlugin({
+      filename: "index-sp.html",
+      template: "./src/template-sp.html"
     })
   ],
   module: {
