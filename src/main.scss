@@ -209,6 +209,18 @@ progress::-moz-progress-bar {
   background-attachment: fixed;
 }
 
+.logo{
+  display: flex;
+  flex-direction: column;
+  span{
+    font-size: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    font-family: $mat;
+    margin-bottom: $spacing;
+  }
+}
 
 .v-line-cont {
   display: flex;
@@ -238,7 +250,7 @@ progress::-moz-progress-bar {
         content: " ";
         @include lineEl;
         bottom: 0;
-        left: -3px;
+        left: -2.5px;
       }
     }
 
@@ -306,7 +318,7 @@ progress::-moz-progress-bar {
             content: " ";
             @include lineEl;
             top: 0;
-            left: -3px;
+            left: -2.5px;
           }
         }
       }
@@ -469,7 +481,7 @@ progress::-moz-progress-bar {
       &:before {
         content: " ";
         @include lineEl;
-        top: -3px;
+        top: -2.5px;
       }
     }
   }
@@ -524,7 +536,7 @@ progress::-moz-progress-bar {
     }
 
     &:before {
-      top: -3px;
+      top: -2.5px;
       right: 0;
       content: "";
       @include lineEl;
@@ -680,7 +692,7 @@ progress::-moz-progress-bar {
       &:before {
         content: " ";
         @include lineEl;
-        top: -3px;
+        top: -2.5px;
         left: 0;
       }
     }
@@ -890,7 +902,7 @@ footer {
     }
 
     &:before {
-      top: -3px;
+      top: -2.5px;
       right: 0;
       content: "";
       @include lineEl;
@@ -1018,8 +1030,6 @@ footer {
     z-index: 2;
     top:5%;
   }
-
-
 
 
 
