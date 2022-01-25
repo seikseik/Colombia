@@ -515,7 +515,7 @@ progress::-moz-progress-bar {
   max-width: $container;
   padding: 0 $spacing*3;
   margin: 0 auto;
-
+  i{font-style: italic;}
   .month {
     @include author;
     margin-bottom: $spacing*2;
