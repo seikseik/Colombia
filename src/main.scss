@@ -222,6 +222,30 @@ progress::-moz-progress-bar {
   }
 }
 
+.lang-switch{
+  position: absolute;
+  top:50vh;
+  right: $spacing*5;
+  ul{
+    text-align: center;
+    li{
+      padding-bottom: $spacing*2;
+    }
+    a{
+      color:white;
+      text-transform: uppercase;
+      opacity: 0.5;
+      font-family: $mat;
+      font-size: 12px;
+      text-decoration: none;
+      &.active{
+        text-decoration: underline;
+        opacity: 1;
+      }
+    }
+  }
+}
+
 .v-line-cont {
   display: flex;
   flex-direction: column;
