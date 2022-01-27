@@ -182,7 +182,12 @@ body {
   font-family: $serif;
   line-height: normal;
 }
-
+.soundcite-play:before, .soundcite-pause:before{
+  border-left-color: white;
+}
+.soundcite{
+  font-style: normal !important;
+}
 
 // progress
 progress {
@@ -755,8 +760,15 @@ progress::-moz-progress-bar {
   }
 }
 
+.swiper-slide{
+  padding: 30px;
+  img{
+    width:100%;
+    height: auto;
+  }
+}
 .swiper-slide-active{
-  transform: scale(1.2);
+  transform: scale(1);
   opacity: 1 !important;
 }
 .slider-section{

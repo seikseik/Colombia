@@ -122,8 +122,7 @@ observer.observe();
     grabCursor: true,
     breakpoints: {
       768: {
-        slidesPerView: 2,
-        spaceBetween: 30,
+        spaceBetween: 10,
       }
     },
     navigation: {
