@@ -434,6 +434,19 @@ progress::-moz-progress-bar {
   opacity: 0;
 }
 
+.video-section-loop{
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: $spacing*12;
+  padding: 0 $spacing*2;
+  &.second{margin-top: $spacing*10; padding: 0}
+  video{
+    display: flex;
+    width:100%;
+    height: auto;
+    margin: 0 auto;
+  }
+}
 
 
 .centered-quote {
@@ -483,6 +496,7 @@ progress::-moz-progress-bar {
       width: 100%;
       font-family: $maz;
       white-space: nowrap;
+      text-transform: uppercase;
     }
 
     .right-line {
@@ -1067,7 +1081,13 @@ footer {
     top:5%;
   }
 
-
+  .video-section-loop{
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: $spacing*6;
+    padding: 0 $spacing*2;
+    &.second{margin-top: $spacing*6; padding: 0}
+  }
 
   .first-section{
     .hero-section{
