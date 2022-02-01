@@ -1348,6 +1348,7 @@ footer {
       .social{
         display: flex;
         justify-content: space-between;
+        margin-bottom: $spacing*3;
       }
       &:nth-child(3){
         width:50%;
