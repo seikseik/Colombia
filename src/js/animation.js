@@ -2,6 +2,7 @@ import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
+
 import Swiper, { Navigation, Pagination } from 'swiper';
 Swiper.use([Navigation, Pagination]);
 
@@ -135,7 +136,7 @@ observer.observe();
          let caption = activeSlide.querySelector('img').getAttribute("data-caption");
          let slideCaption = this.el.parentElement.querySelector(".slide-captions");
          if(slideCaption != null){
-           slideCaption.innerHTML = "<h2 class='current-title'>" + caption + "</h2>"
+           slideCaption.innerHTML = "<h2 class='current-title'>"  + caption + "</h2>"
          }
      }
    }
