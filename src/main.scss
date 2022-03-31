@@ -592,7 +592,11 @@ progress::-moz-progress-bar {
     align-items: flex-end;
     margin-bottom: $spaceS;
     padding: 0 $spacing*3;
-
+    .right-c{
+      a{
+        text-decoration: none;
+      }
+    }
     .left-c {
       h5 {
         @include author;
@@ -968,9 +972,9 @@ footer {
 
     .link-container {
       display: flex;
-
       a {
         color: white;
+        text-decoration: none;
       }
       line-height: 1.5;
 
@@ -1361,6 +1365,7 @@ footer {
         display: flex;
         justify-content: space-between;
         margin-bottom: $spacing*3;
+        a{text-decoration: none;}
       }
       &:nth-child(3){
         width:50%;
